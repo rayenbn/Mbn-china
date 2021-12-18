@@ -7,7 +7,7 @@
         <section class="not-found-wrap text-center">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         @if(\Session::has('message'))
                             <div class="alert alert-danger">
                                 <strong>Error!</strong>

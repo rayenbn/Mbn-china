@@ -28,7 +28,7 @@ $cart_items = Controller::cartItems();
 					<a href="/"><img src="/storage/logo/{{ $global_settings->logo ?? ''}}" alt="Pufflex logo"></a>
 			</div>
 			<div class="quick-access-menu col-lg-4">
-				<div class="quick-access__item">
+				<!-- <div class="quick-access__item">
 					<div class="select-currency">
 						<select class="select-style js-select2">
 							<option value="usd">USD</option>
@@ -36,7 +36,7 @@ $cart_items = Controller::cartItems();
 							<option value="gbr">GBR</option>
 						</select>
 					</div>
-				</div>
+				</div> -->
 				
 				@guest
 				<div class="quick-access__item quick-access__item_border-r">
@@ -82,12 +82,12 @@ $cart_items = Controller::cartItems();
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('shop') ? 'active' : '' }}" href="{{ route('shop') }}">Shop</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('promo') ? 'active' : '' }}" href="{{ route('promo') }}">Promo</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" href="{{ route('aboutus') }}">About Pufflex</a>
 					<!-- <ul class="sub-menu">
@@ -99,9 +99,9 @@ $cart_items = Controller::cartItems();
 						</li>
 					</ul> -->
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('blogs') ? 'active' : '' }}" href="{{ route('blogs') }}">Blog</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact</a>
 				</li>

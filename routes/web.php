@@ -24,7 +24,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('our-products/{id}-{slug}', 'ProductsController@show')->name("shop.detail");
     
     Route::get('contact-us', 'ContactusController@index')->name("contactus");
-    Route::post('contact-us/send', 'ContactusController@sendContact');
+    Route::post('contact-us/company/send', 'ContactusController@sendContactCompany');
+    Route::post('contact-us/private/send', 'ContactusController@sendContactPrivate');
 
     Route::get('get-a-quote', 'QuoteController@index')->name("quote");
     Route::post('get-a-quote/send', 'QuoteController@sendQuote');

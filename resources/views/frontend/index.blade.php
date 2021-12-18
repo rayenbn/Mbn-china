@@ -76,16 +76,16 @@
             </div>
         </section>
         
-        <!-- <section class="promo-section" id="scroll-to">
+        <section class="promo-section">
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-lg-5 promo-section__img">
-                        <img src="{{ asset('img/model3.jpg') }}" alt="">
+                        <img src="{{ asset('img/squear-pufflex1.jpg') }}" alt="">
                     </div>
                     <div class="col-lg-7 promo-section__card">
                         <div class="promo-card">
                             <a href="single-product.html">
-                                <img src="{{ asset('img/gk-bar.jpg') }}" alt="" class="promo-card__img">
+                                <img src="{{ asset('img/square-4.jpg') }}" alt="" class="promo-card__img">
                             </a>
                             <div class="promo-card__content">
                                 <h2 class="promo-card__title"><a href="single-product.html">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         {{--
         <section class="section-offers">
