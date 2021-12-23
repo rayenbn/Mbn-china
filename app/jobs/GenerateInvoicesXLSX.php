@@ -133,8 +133,8 @@ class GenerateInvoicesXLSX implements ShouldQueue
      */
     public function handle()
     {
-        $this->drawing->setName('crosslimitsgear.com');
-        $this->drawing->setDescription('crosslimitsgear.com');
+        $this->drawing->setName('pufflex.com');
+        $this->drawing->setDescription('pufflex.com');
         $this->drawing->setPath(public_path('/theme/logo.png'));
         $this->drawing->setCoordinates('L4');
         $this->drawing->setOffsetY(0);
@@ -178,7 +178,7 @@ class GenerateInvoicesXLSX implements ShouldQueue
     private function setPropertiesSheet()
     {
         $this->getActiveSheet()->setTitle($this->invoiceNumber, false);
-        $this->spreadsheet->getProperties()->setCreator(env('APP_NAME', 'CROSSLIMITSGEAR.com'));
+        $this->spreadsheet->getProperties()->setCreator(env('APP_NAME', 'pufflex.com'));
     }
 
     /**
@@ -452,7 +452,7 @@ class GenerateInvoicesXLSX implements ShouldQueue
             ->setCellValue('J' . ($shipsStart + 5), 'BENEFICIARY BANK: ')
             ->setCellValue('k' . ($shipsStart + 5), 'YINZHOU BANK.')
 
-            // ->setCellValue('C' . ($shipsStart + 8), 'The terms and conditions stated on crosslimitsgear.com apply to this invoice ')
+            // ->setCellValue('C' . ($shipsStart + 8), 'The terms and conditions stated on pufflex.com apply to this invoice ')
             ;
 
         return $this;

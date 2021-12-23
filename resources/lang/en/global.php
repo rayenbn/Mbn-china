@@ -329,7 +329,7 @@ return [
     'deselect_all'                         => 'Deselect all',
     'team-management'                      => 'Teams',
     'team-management-singular'             => 'Team',
-    'site_title'                           => 'CrossLimits dashboard',
+    'site_title'                           => 'Pufflex dashboard',
     'choose_file'                          => 'Choose file',
     'upload'                               => 'Upload',
     'about_us_page'                         => 'About us Page',

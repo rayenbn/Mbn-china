@@ -13,7 +13,7 @@
         <td align="left" style="font-size: 16px; font-family: Avenir,sans-serif;">
             <p style="color: black;">Dear {{ ucfirst($clientName) }}</p>
 
-			<p style="color: black;">Congrats on your order at CROSSLIMITS. <br>
+			<p style="color: black;">Congrats on your order at PUFFLEX. <br>
 			We have already received your product details.<p>
 
 			{{--  <p style="color: black;">Attached you can find your invoice.<br>
@@ -25,7 +25,7 @@
                 <p style="color: black">Your artwork files</p>
             @foreach ($files as $key => $file)
                 <ul>
-                    <li><a href="https://www.crosslimits.com{{ $file['path'] }}" > {{ $file['image'] }} </a></li>
+                    <li><a href="https://www.pufflex.com{{ $file['path'] }}" > {{ $file['image'] }} </a></li>
                 </ul>
             @endforeach
             @endif --}}
@@ -39,10 +39,10 @@
     <tr>
         <td align="left" style="font-size: 10px; color: #7b7e7d; font-family: Verdana,sans-serif;">
           
-            <b>Zara</b> <br>
+            <b>Rayen Ben</b> <br>
             <br>
-            zara@crosslimits.com<br>
-			CN: +86 1888888888
+            rayen@pufflex.com<br>
+			CN: +86 135 0152 1601
         </td>
     </tr>
 </table>
