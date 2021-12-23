@@ -15,7 +15,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/blogs', 'blogController@index')->name('blogs');
     Route::get('/blogs/{blog}-{slug}', 'blogController@show');
 
-    Route::get('warranty', 'HomeController@warranty')->name("warranty");
+    Route::get('terms-and-condition', 'HomeController@warranty')->name("terms");
+    Route::get('privacy-policy', 'HomeController@privacy')->name("privacy");
     
     Route::get('products/{category}-{slug}', 'ProductsController@category')->name('categories');
     // Route::get('/file/{name}', 'ProductsController@downloadfile')->name('downloadfile');
@@ -116,6 +117,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('home-page', 'HomePageController');
 
     Route::resource('warranty-page', 'WarrantyController');
+    
+    Route::resource('privacy-page', 'PrivacyController');
 
     Route::resource('gallery-page', 'GalleryPageController');
 

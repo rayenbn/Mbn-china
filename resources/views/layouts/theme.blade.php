@@ -86,7 +86,7 @@
 	
 	
 	<!-- Theme -->
-	<!-- <script src="{{ asset('theme/assets/js/custom.js')}}"></script> -->
+	<script src="{{ asset('theme/assets/js/custom.js')}}"></script>
 	<script src="{{ mix('/js/app.js') }}"></script>
 
 	@yield('scripts')

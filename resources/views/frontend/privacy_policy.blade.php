@@ -7,7 +7,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">TERMS & CONDITIONS</li>
+                <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
             </ol>
         </div>
     </nav>				
@@ -22,10 +22,10 @@
                                     <div class="col-md-2"></div>
                                         <div class="col-md-8">
                                             <div class="product-view">
-                                                <h3 class="section-title text-center">{{ $warranty->title ?? ''}}</h3>
+                                                <h3 class="section-title text-center">{{ $privacy->title ?? ''}}</h3>
                                                 <br>
                                                 <br>
-                                                {!! $warranty->content ?? '' !!}
+                                                {!! $privacy->content ?? '' !!}
                                         
                                             </div>
                                     </div>

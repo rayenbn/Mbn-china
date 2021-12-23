@@ -235,7 +235,18 @@
                                 <p>
                                     <i class="fas fa-book">
                                     </i>
-                                    <span>warranty Page</span>
+                                    <span>Warranty Page</span>
+                                </p>
+                            </a>
+                        </li>
+                        @endcan
+                        @can('settings_access')
+                        <li class="nav-item">
+                            <a href="{{ route("admin.privacy-page.index") }}" class="nav-link">
+                                <p>
+                                    <i class="fas fa-book">
+                                    </i>
+                                    <span>Privacy Page</span>
                                 </p>
                             </a>
                         </li>

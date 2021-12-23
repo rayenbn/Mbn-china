@@ -43,18 +43,18 @@ $global_settings =Controller::global_settings();
 				<li class="nav-item">
 					<a class="nav-link" href="{{ url('/') }}">Home</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="{{ route('shop') }}">Shop</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('aboutus') }}">Promo</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('aboutus') }}">About</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="{{ route('blogs') }}">Blog</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('contactus') }}">Contact</a>
 				</li>
@@ -64,8 +64,8 @@ $global_settings =Controller::global_settings();
 		<div class="footer-bottom">
 			<div class="copyright">Copyright &copy; 2021<a href="http://www.pufflex.com/"> pufflex.com </a>. All Rights Reserved.</div>
 			<ul class="footer-bottom__menu">
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="/warranty">Terms of use</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/terms-and-condition">Terms of use</a></li>
 			</ul>
 		</div>
 	</div>

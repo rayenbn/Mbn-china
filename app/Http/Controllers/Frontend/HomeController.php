@@ -14,6 +14,7 @@ use App;
 use App\Blog;
 use App\Gallery;
 use App\Newsletter;
+use App\PrivacyPolicy;
 
 class HomeController extends Controller
 {
@@ -44,6 +45,17 @@ class HomeController extends Controller
         return view('frontend.warranty', compact('warranty'));
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function privacy()
+    {
+        $privacy = PrivacyPolicy::first();
+        return view('frontend.privacy_policy', compact('privacy'));
+    }
+    
     /**
      * Display a listing of the resource.
      *
