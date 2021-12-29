@@ -39,6 +39,19 @@
                             {{ trans('global.product.fields.name_helper') }}
                         </p>
                     </div>
+                    <div class="form-group col-sm-6 {{ $errors->has('link') ? 'has-error' : '' }}">
+                        <label for="link">Link</label>
+                        <input type="text" id="link" name="link" class="form-control" value="{{ old('link', isset($slider) ? $slider->link : '') }}">
+                        @if($errors->has('link'))
+                        <em class="invalid-feedback">
+                            {{ $errors->first('link') }}
+                        </em>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('global.product.fields.name_helper') }}
+                        </p>
+                    </div>
+
                     <div>
                         <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
                     </div>

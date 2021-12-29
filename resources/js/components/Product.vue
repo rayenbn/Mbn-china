@@ -72,7 +72,7 @@
 
                             <div class="row">
                             <template v-for="(type, index) in types"  >
-                                 <div class="form-group mb-10 col-6" :key="index">
+                                 <div class="form-group mb-10 col-md-6" :key="index">
                                     <label :key="'typenane' + index" for="type">{{ type.name }}</label>
                                     <select class="form-control js-select2 active" :key="'type' + index"
                                         v-model="prodtypes[index]"

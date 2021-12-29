@@ -23,7 +23,7 @@
                             </div>
 
                             <div class="form-group mb-20">
-                                <input type="password" name="password" class="form-control mb-10 active" placeholder="Default active">
+                                <input type="password" name="password" class="form-control mb-10 active" placeholder="Password">
                             </div>
                             <div class="row">
                                 <label class="col-6" style="text-align: initial;">

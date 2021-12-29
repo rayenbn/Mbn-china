@@ -82,22 +82,25 @@ $cart_items = Controller::cartItems();
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
 				</li>
-				<!-- <li class="nav-item">
+			{{--	<!-- <li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('shop') ? 'active' : '' }}" href="{{ route('shop') }}">Shop</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('promo') ? 'active' : '' }}" href="{{ route('promo') }}">Promo</a>
-				</li> -->
+				</li> --> --}}
 				<li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" href="{{ route('aboutus') }}">About Pufflex</a>
-					<!-- <ul class="sub-menu">
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Products</a>
+					<ul class="sub-menu">
 						<li class="nav-item">
-							<a class="nav-link" href="shortcodes.html">Shortcodes</a>
+							<a class="nav-link" href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">PUFFLEX LADIES</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="404.html">404 Page</a>
+							<a class="nav-link" href="/our-products/2-pufflex-square-serie-600-4000-puffs">PUFFLEX SQUARE</a>
 						</li>
-					</ul> -->
+					</ul>
 				</li>
 				<!-- <li class="nav-item">
 					<a class="nav-link {{ request()->routeIs('blogs') ? 'active' : '' }}" href="{{ route('blogs') }}">Blog</a>

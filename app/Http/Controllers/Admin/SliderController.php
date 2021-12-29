@@ -73,6 +73,7 @@ class SliderController extends Controller
             'picture'         => $path,
             'title'       => $request->input('title'),
             'subtitle'       => $request->input('subtitle'),
+            'link'       => $request->input('link'),
             
          ];
 
@@ -144,6 +145,7 @@ class SliderController extends Controller
             'picture'         => $path,
             'title'       => $request->input('title'),
             'subtitle'       => $request->input('subtitle'),
+            'link'       => $request->input('link'),
          ];
 
         $slider->update($slider_data);

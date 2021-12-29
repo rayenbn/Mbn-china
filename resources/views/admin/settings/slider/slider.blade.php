@@ -115,6 +115,17 @@
                             @endif
                         </div>
                     </div>
+                    <div class="form-group{{ $errors->has('link') ? ' has-error' : '' }}">
+                        <label for="link" class="col-md-6 control-label">Link</label>
+                        <div class="col-md-10">
+                            <input id="link" type="text" class="form-control" name="link" value="{{ old('link') }}">
+                            @if ($errors->has('link'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('link') }}</strong>
+                            </span>
+                            @endif
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

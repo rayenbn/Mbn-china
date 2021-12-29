@@ -47,6 +47,7 @@
                                 <h2 class="promo-card__title"><a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
                                 <div class="promo-card__text">Disposable Vape Pods, Style and functionality go hand in hand</div>
                                 <div class="promo-card__text">PFL series is designed for ladies</div>
+                                <a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
                             </div>
                         </div>
                     </div>
@@ -84,14 +85,14 @@
                     </div>
                     <div class="col-lg-7 promo-section__card">
                         <div class="promo-card">
-                            <a href="single-product.html">
+                            <a href="/our-products/2-pufflex-square-serie-600-4000-puffs">
                                 <img src="{{ asset('img/square-5.jpg') }}" alt="" class="promo-card__img">
                             </a>
                             <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="single-product.html">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
+                                <h2 class="promo-card__title"><a href="/our-products/2-pufflex-square-serie-600-4000-puffs">PUFFLEX SQUARE SERIE 600-4000 Puffs</a></h2>
                                 <div class="promo-card__text">Disposable Vape Pods, Style and functionality go hand in hand</div>
-                                <div class="promo-card__text">PFL series is designed for ladies</div>
-                                <a href="single-product.html" class="btn btn-primary btn-lg">discover</a>
+                                <div class="promo-card__text">PFSQ series is designed for big puffs cigarette</div>
+                                <a href="/our-products/2-pufflex-square-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
                             </div>
                         </div>
                     </div>

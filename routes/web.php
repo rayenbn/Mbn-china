@@ -21,7 +21,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('products/{category}-{slug}', 'ProductsController@category')->name('categories');
     // Route::get('/file/{name}', 'ProductsController@downloadfile')->name('downloadfile');
     Route::resource('our-products', 'ProductsController');
-    Route::get('our-products', 'ProductsController@index')->name("shop");
+    // Route::get('our-products', 'ProductsController@index')->name("shop");
     Route::get('our-products/{id}-{slug}', 'ProductsController@show')->name("shop.detail");
     
     Route::get('contact-us', 'ContactusController@index')->name("contactus");
