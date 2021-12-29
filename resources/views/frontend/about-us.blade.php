@@ -41,15 +41,18 @@
         <section class="section-about">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-5">
+                    <div class="col-lg-7">
                         <h3 class="section-title mb-40">{{ $aboutus->sec_one_title ?? ''}}</h3>
 
                         {!! $aboutus->sec_one_text ?? '' !!}
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-5">
                         @if(isset($aboutus->sec_one_img))
                         <img src="/storage/images/banners/{{ $aboutus->sec_one_img ?? ''}}" alt="{{ $aboutus->sec_one_title ?? ''}}"/>
                         @endif
+                    </div>
+                    <div style="width: 100%; text-align: center;">
+                        <img src="{{ asset('img/certificates.png')}}" alt="pufflex certificates"/>
                     </div>
                 </div>
             </div>
@@ -103,7 +106,7 @@
         @if ($galleries->count() > 0)
         <section class="section-team">
             <div class="container">
-                <h3 class="section-title text-center">Our Gallery</h3>
+                <h3 class="section-title text-center">Pufflex Factory</h3>
                 <!-- Gallery -Photo -->
                 <div class="gallery gallery-lightbox gallery-photos gallery-filled hover-zoom">
 
