@@ -43,7 +43,7 @@
                         @endif
                     </td>
                     <td class="product-price" data-title="Price: ">
-                        <span class="amount">$ {{ $item->price ?? '' }}</span>
+                        <span class="amount">$ {{ number_format($item->price, 2) ?? '' }}</span>
                     </td>
                     <td class="product-quantity" data-title="Quantity: ">
                         <span class="amount">{{ $item->qty ?? '' }}</span>
@@ -60,7 +60,7 @@
 
                     </td>
                     <td class="product-subtotal" data-title="Total: ">
-                        <span class="amount">$ {{ $item->total ?? '' }}</span>
+                        <span class="amount">$ {{ number_format($item->total, 2) ?? '' }}</span>
                     </td>
                 </tr>
                 @endforeach

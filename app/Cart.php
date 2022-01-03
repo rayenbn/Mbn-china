@@ -24,4 +24,13 @@ class Cart extends Model
         'invoice_number',
         'logofile',
     ];
+
+    public function getPriceAttribute($value)
+    {
+        return $value / 100;  
+    }
+    public function getTotalAttribute($value)
+    {
+        return $value / 100;  
+    }
 }

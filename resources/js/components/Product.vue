@@ -33,12 +33,12 @@
 
                         <div class="price">
                             <ins>Unit Price: 
-                                <span v-if="hasAuthUser" class="amount">{{ totalprice }}</span>
+                                <span v-if="hasAuthUser" class="amount">$ {{ formatPrice(totalprice) }}</span>
                                 <span v-else class="amount"><a href="/login">Login to see price</a></span>
                             </ins>
                             <br>
                             <ins>Total
-                                 <span v-if="hasAuthUser" class="amount">{{ totalprice * quantity }}</span>
+                                 <span v-if="hasAuthUser" class="amount">$ {{ formatPrice(totalprice * quantity) }}</span>
                                 <span v-else class="amount"><a href="/login">Login to see price</a></span>
                             </ins>
                         </div>
@@ -74,16 +74,15 @@
                             <template v-for="(type, index) in types"  >
                                  <div class="form-group mb-10 col-md-6" :key="index">
                                     <label :key="'typenane' + index" for="type">{{ type.name }}</label>
-                                    <select class="form-control js-select2 active" :key="'type' + index"
+                                    <select class="form-control active" :key="'type' + index"
                                         v-model="prodtypes[index]"
                                         @change="typeChange"
                                         name="type"
                                     >
-                                    <!-- <option value="" selected>Select option</option> -->
                                         <option 
                                             v-for="(variant, index) in type.variants" 
-                                            :value="variant.name" 
-                                            :key="'variant' + index"
+                                            v-bind:value="variant" 
+                                            v-bind:key="'variant' + index"
                                         >
                                             {{ variant.name }}
                                         </option>
@@ -288,7 +287,7 @@
                     this.typesTotalPrice = 0;
                     for (let i = 0; i < this.prodtypes.length; i++){
                         this.typesTotalPrice += this.prodtypes[i].price;
-                        
+                        console.log(this.prodtypes[i].price);
                     }
                 }
 
@@ -362,6 +361,10 @@
             },
             redirectToLogin() {
                 window.location.href = "/login";
+            },
+            formatPrice(value) {
+                let val = (value/1).toFixed(2).replace('.', ',')
+                return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
             }
         },
         mounted() {

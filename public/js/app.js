@@ -2443,7 +2443,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'product',
   props: {
@@ -2555,6 +2554,7 @@ __webpack_require__.r(__webpack_exports__);
 
         for (var i = 0; i < this.prodtypes.length; i++) {
           this.typesTotalPrice += this.prodtypes[i].price;
+          console.log(this.prodtypes[i].price);
         }
       }
 
@@ -2615,6 +2615,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     redirectToLogin: function redirectToLogin() {
       window.location.href = "/login";
+    },
+    formatPrice: function formatPrice(value) {
+      var val = (value / 1).toFixed(2).replace('.', ',');
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
   },
   mounted: function mounted() {
@@ -7165,7 +7169,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* img {\n  max-width: 100%;\n} */\n\n\n/**\n * Helper Styles\n */\n.ir[data-v-7e94e6d4] {\n  text-indent: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n}\n    /**\n * Gallery Styles\n * 1. Enable fluid images\n */\n.gallery[data-v-7e94e6d4] {\n  overflow: hidden;\n}\n.gallery__hero[data-v-7e94e6d4] {\n  overflow: hidden;\n  position: relative;\n  padding: 2em;\n  margin: 0 0 0.3333333333em;\n  background: #fff;\n}\n.is-zoomed .gallery__hero[data-v-7e94e6d4] {\n  cursor: move;\n}\n.is-zoomed .gallery__hero img[data-v-7e94e6d4] {\n  max-width: none;\n  position: absolute;\n  z-index: 0;\n  top: -50%;\n  left: -50%;\n}\n.gallery__hero-enlarge[data-v-7e94e6d4] {\n  position: absolute;\n  right: 0.5em;\n  bottom: 0.5em;\n  z-index: 1;\n  width: 30px;\n  height: 30px;\n  opacity: 0.5;\n  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iNS4wIC0xMC4wIDEwMC4wIDEzNS4wIiBmaWxsPSIjMzRCZjQ5Ij48cGF0aCBkPSJNOTMuNTkzIDg2LjgxNkw3Ny4wNDUgNzAuMjY4YzUuNDEzLTYuODczIDguNjQyLTE1LjUyNiA4LjY0Mi0yNC45MTRDODUuNjg3IDIzLjEwNCA2Ny41OTMgNSA0NS4zNDMgNVM1IDIzLjEwNCA1IDQ1LjM1NGMwIDIyLjI0IDE4LjA5NCA0MC4zNDMgNDAuMzQzIDQwLjM0MyA5LjQgMCAxOC4wNjItMy4yNCAyNC45MjQtOC42NTNsMTYuNTUgMTYuNTZjLjkzNy45MjcgMi4xNjIgMS4zOTYgMy4zODggMS4zOTYgMS4yMjUgMCAyLjQ1LS40NyAzLjM5LTEuMzk2IDEuODc0LTEuODc1IDEuODc0LTQuOTEyLS4wMDItNi43ODh6bS00OC4yNS0xMC43MWMtMTYuOTU0IDAtMzAuNzUzLTEzLjc5OC0zMC43NTMtMzAuNzUyIDAtMTYuOTY0IDEzLjgtMzAuNzY0IDMwLjc1My0zMC43NjQgMTYuOTY0IDAgMzAuNzUzIDEzLjggMzAuNzUzIDMwLjc2NCAwIDE2Ljk1NC0xMy43ODggMzAuNzUzLTMwLjc1MyAzMC43NTN6TTYzLjAzMiA0NS4zNTRjMCAyLjM0NC0xLjkwNyA0LjI2Mi00LjI2MiA0LjI2MmgtOS4xNjR2OS4xNjRjMCAyLjM0NC0xLjkwNyA0LjI2Mi00LjI2MiA0LjI2Mi0yLjM1NSAwLTQuMjYyLTEuOTE4LTQuMjYyLTQuMjYydi05LjE2NGgtOS4xNjRjLTIuMzU1IDAtNC4yNjItMS45MTgtNC4yNjItNC4yNjIgMC0yLjM1NSAxLjkwNy00LjI2MiA0LjI2Mi00LjI2Mmg5LjE2NHYtOS4xNzVjMC0yLjM0NCAxLjkwNy00LjI2MiA0LjI2Mi00LjI2MiAyLjM1NSAwIDQuMjYyIDEuOTE4IDQuMjYyIDQuMjYydjkuMTc1aDkuMTY0YzIuMzU1IDAgNC4yNjIgMS45MDcgNC4yNjIgNC4yNjJ6Ii8+PC9zdmc+);\n  background-repeat: no-repeat;\n  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n}\n.gallery__hero-enlarge[data-v-7e94e6d4]:hover {\n  opacity: 1;\n}\n.is-zoomed .gallery__hero-enlarge[data-v-7e94e6d4] {\n  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iNS4wIC0xMC4wIDEwMC4wIDEzNS4wIiBmaWxsPSIjMzRCZjQ5Ij48cGF0aCBkPSJNOTMuNTkzIDg2LjgxNkw3Ny4wNDUgNzAuMjY4YzUuNDEzLTYuODczIDguNjQyLTE1LjUyNiA4LjY0Mi0yNC45MTRDODUuNjg3IDIzLjEwNCA2Ny41OTMgNSA0NS4zNDMgNVM1IDIzLjEwNCA1IDQ1LjM1NGMwIDIyLjI0IDE4LjA5NCA0MC4zNDMgNDAuMzQzIDQwLjM0MyA5LjQgMCAxOC4wNjItMy4yNCAyNC45MjQtOC42NTNsMTYuNTUgMTYuNTZjLjkzNy45MjcgMi4xNjIgMS4zOTYgMy4zODggMS4zOTYgMS4yMjUgMCAyLjQ1LS40NyAzLjM5LTEuMzk2IDEuODc0LTEuODc1IDEuODc0LTQuOTEyLS4wMDItNi43ODh6TTE0LjU5IDQ1LjM1NGMwLTE2Ljk2NCAxMy44LTMwLjc2NCAzMC43NTMtMzAuNzY0IDE2Ljk2NCAwIDMwLjc1MyAxMy44IDMwLjc1MyAzMC43NjQgMCAxNi45NTQtMTMuNzkgMzAuNzUzLTMwLjc1MyAzMC43NTMtMTYuOTUzIDAtMzAuNzUzLTEzLjgtMzAuNzUzLTMwLjc1M3pNNTguNzcyIDQ5LjYxSDMxLjkyYy0yLjM1NSAwLTQuMjYzLTEuOTA3LTQuMjYzLTQuMjZzMS45MDgtNC4yNjMgNC4yNjItNC4yNjNINTguNzdjMi4zNTQgMCA0LjI2MiAxLjkwOCA0LjI2MiA0LjI2MnMtMS45MSA0LjI2LTQuMjYyIDQuMjZ6Ii8+PC9zdmc+);\n}\n.gallery__thumbs[data-v-7e94e6d4] {\n  text-align: center;\n  background: #333;\n}\n.gallery__thumbs a[data-v-7e94e6d4] {\n  display: inline-block;\n  width: 20%;\n  padding: 0.5em;\n  opacity: 0.75;\n  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n}\n.gallery__thumbs a[data-v-7e94e6d4]:hover {\n  opacity: 1;\n}\n.gallery__thumbs a.is-active[data-v-7e94e6d4] {\n  opacity: 0.2;\n}\ninput[type=\"file\"][data-v-7e94e6d4] {\n    display: none;\n}\n.custom-file-upload[data-v-7e94e6d4] {\n    border: 1px solid #ccc;\n    display: inline-block;\n    padding: 6px 12px;\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* img {\n  max-width: 100%;\n} */\n\n\n/**\n * Helper Styles\n */\n.ir[data-v-7e94e6d4] {\n  text-indent: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n}\n    /**\n * Gallery Styles\n * 1. Enable fluid images\n */\n.gallery[data-v-7e94e6d4] {\n  overflow: hidden;\n}\n.gallery__hero[data-v-7e94e6d4] {\n  overflow: hidden;\n  position: relative;\n  padding: 2em;\n  margin: 0 0 0.3333333333em;\n  background: #fff;\n}\n.is-zoomed .gallery__hero[data-v-7e94e6d4] {\n  cursor: move;\n}\n.is-zoomed .gallery__hero img[data-v-7e94e6d4] {\n  max-width: none;\n  position: absolute;\n  z-index: 0;\n  top: -50%;\n  left: -50%;\n}\n.gallery__hero-enlarge[data-v-7e94e6d4] {\n  position: absolute;\n  right: 0.5em;\n  bottom: 0.5em;\n  z-index: 1;\n  width: 30px;\n  height: 30px;\n  opacity: 0.5;\n  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iNS4wIC0xMC4wIDEwMC4wIDEzNS4wIiBmaWxsPSIjMzRCZjQ5Ij48cGF0aCBkPSJNOTMuNTkzIDg2LjgxNkw3Ny4wNDUgNzAuMjY4YzUuNDEzLTYuODczIDguNjQyLTE1LjUyNiA4LjY0Mi0yNC45MTRDODUuNjg3IDIzLjEwNCA2Ny41OTMgNSA0NS4zNDMgNVM1IDIzLjEwNCA1IDQ1LjM1NGMwIDIyLjI0IDE4LjA5NCA0MC4zNDMgNDAuMzQzIDQwLjM0MyA5LjQgMCAxOC4wNjItMy4yNCAyNC45MjQtOC42NTNsMTYuNTUgMTYuNTZjLjkzNy45MjcgMi4xNjIgMS4zOTYgMy4zODggMS4zOTYgMS4yMjUgMCAyLjQ1LS40NyAzLjM5LTEuMzk2IDEuODc0LTEuODc1IDEuODc0LTQuOTEyLS4wMDItNi43ODh6bS00OC4yNS0xMC43MWMtMTYuOTU0IDAtMzAuNzUzLTEzLjc5OC0zMC43NTMtMzAuNzUyIDAtMTYuOTY0IDEzLjgtMzAuNzY0IDMwLjc1My0zMC43NjQgMTYuOTY0IDAgMzAuNzUzIDEzLjggMzAuNzUzIDMwLjc2NCAwIDE2Ljk1NC0xMy43ODggMzAuNzUzLTMwLjc1MyAzMC43NTN6TTYzLjAzMiA0NS4zNTRjMCAyLjM0NC0xLjkwNyA0LjI2Mi00LjI2MiA0LjI2MmgtOS4xNjR2OS4xNjRjMCAyLjM0NC0xLjkwNyA0LjI2Mi00LjI2MiA0LjI2Mi0yLjM1NSAwLTQuMjYyLTEuOTE4LTQuMjYyLTQuMjYydi05LjE2NGgtOS4xNjRjLTIuMzU1IDAtNC4yNjItMS45MTgtNC4yNjItNC4yNjIgMC0yLjM1NSAxLjkwNy00LjI2MiA0LjI2Mi00LjI2Mmg5LjE2NHYtOS4xNzVjMC0yLjM0NCAxLjkwNy00LjI2MiA0LjI2Mi00LjI2MiAyLjM1NSAwIDQuMjYyIDEuOTE4IDQuMjYyIDQuMjYydjkuMTc1aDkuMTY0YzIuMzU1IDAgNC4yNjIgMS45MDcgNC4yNjIgNC4yNjJ6Ii8+PC9zdmc+);\n  background-repeat: no-repeat;\n  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n}\n.gallery__hero-enlarge[data-v-7e94e6d4]:hover {\n  opacity: 1;\n}\n.is-zoomed .gallery__hero-enlarge[data-v-7e94e6d4] {\n  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iNS4wIC0xMC4wIDEwMC4wIDEzNS4wIiBmaWxsPSIjMzRCZjQ5Ij48cGF0aCBkPSJNOTMuNTkzIDg2LjgxNkw3Ny4wNDUgNzAuMjY4YzUuNDEzLTYuODczIDguNjQyLTE1LjUyNiA4LjY0Mi0yNC45MTRDODUuNjg3IDIzLjEwNCA2Ny41OTMgNSA0NS4zNDMgNVM1IDIzLjEwNCA1IDQ1LjM1NGMwIDIyLjI0IDE4LjA5NCA0MC4zNDMgNDAuMzQzIDQwLjM0MyA5LjQgMCAxOC4wNjItMy4yNCAyNC45MjQtOC42NTNsMTYuNTUgMTYuNTZjLjkzNy45MjcgMi4xNjIgMS4zOTYgMy4zODggMS4zOTYgMS4yMjUgMCAyLjQ1LS40NyAzLjM5LTEuMzk2IDEuODc0LTEuODc1IDEuODc0LTQuOTEyLS4wMDItNi43ODh6TTE0LjU5IDQ1LjM1NGMwLTE2Ljk2NCAxMy44LTMwLjc2NCAzMC43NTMtMzAuNzY0IDE2Ljk2NCAwIDMwLjc1MyAxMy44IDMwLjc1MyAzMC43NjQgMCAxNi45NTQtMTMuNzkgMzAuNzUzLTMwLjc1MyAzMC43NTMtMTYuOTUzIDAtMzAuNzUzLTEzLjgtMzAuNzUzLTMwLjc1M3pNNTguNzcyIDQ5LjYxSDMxLjkyYy0yLjM1NSAwLTQuMjYzLTEuOTA3LTQuMjYzLTQuMjZzMS45MDgtNC4yNjMgNC4yNjItNC4yNjNINTguNzdjMi4zNTQgMCA0LjI2MiAxLjkwOCA0LjI2MiA0LjI2MnMtMS45MSA0LjI2LTQuMjYyIDQuMjZ6Ii8+PC9zdmc+);\n}\n.gallery__thumbs[data-v-7e94e6d4] {\n  text-align: center;\n  background: #333;\n}\n.gallery__thumbs a[data-v-7e94e6d4] {\n  display: inline-block;\n  width: 20%;\n  padding: 0.5em;\n  opacity: 0.75;\n  transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n}\n.gallery__thumbs a[data-v-7e94e6d4]:hover {\n  opacity: 1;\n}\n.gallery__thumbs a.is-active[data-v-7e94e6d4] {\n  opacity: 0.2;\n}\ninput[type=\"file\"][data-v-7e94e6d4] {\n    display: none;\n}\n.custom-file-upload[data-v-7e94e6d4] {\n    border: 1px solid #ccc;\n    display: inline-block;\n    padding: 6px 12px;\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -39127,7 +39131,7 @@ var render = function() {
                 _vm._v("Unit Price: \n                            "),
                 _vm.hasAuthUser
                   ? _c("span", { staticClass: "amount" }, [
-                      _vm._v(_vm._s(_vm.totalprice))
+                      _vm._v("$ " + _vm._s(_vm.formatPrice(_vm.totalprice)))
                     ])
                   : _c("span", { staticClass: "amount" }, [
                       _c("a", { attrs: { href: "/login" } }, [
@@ -39142,7 +39146,10 @@ var render = function() {
                 _vm._v("Total\n                             "),
                 _vm.hasAuthUser
                   ? _c("span", { staticClass: "amount" }, [
-                      _vm._v(_vm._s(_vm.totalprice * _vm.quantity))
+                      _vm._v(
+                        "$ " +
+                          _vm._s(_vm.formatPrice(_vm.totalprice * _vm.quantity))
+                      )
                     ])
                   : _c("span", { staticClass: "amount" }, [
                       _c("a", { attrs: { href: "/login" } }, [
@@ -39283,7 +39290,10 @@ var render = function() {
                       return [
                         _c(
                           "div",
-                          { key: index, staticClass: "form-group mb-10 col-6" },
+                          {
+                            key: index,
+                            staticClass: "form-group mb-10 col-md-6"
+                          },
                           [
                             _c(
                               "label",
@@ -39306,7 +39316,7 @@ var render = function() {
                                   }
                                 ],
                                 key: "type" + index,
-                                staticClass: "form-control js-select2 active",
+                                staticClass: "form-control active",
                                 attrs: { name: "type" },
                                 on: {
                                   change: [
@@ -39339,7 +39349,7 @@ var render = function() {
                                   "option",
                                   {
                                     key: "variant" + index,
-                                    domProps: { value: variant.name }
+                                    domProps: { value: variant }
                                   },
                                   [
                                     _vm._v(

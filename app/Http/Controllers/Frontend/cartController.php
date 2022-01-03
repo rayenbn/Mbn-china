@@ -60,16 +60,16 @@ class cartController extends Controller
                 $typesdesc .= '- '.$type->name.  "<br>";
             }
         }
-        $totalPrice = ($product ? $product->price : 0) + ($types ? $typesPrice : 0)+ ($color ? $color->price : 0);
+        $totalPrice = (($product ? $product->price : 0) + ($types ? $typesPrice : 0)+ ($color ? $color->price : 0)) * 100;
         
-        
+        // dd($totalPrice);
         $data =[
             'prod_id' => $request->id,
             'prod_img' => $product->img,
             'prod_name' => $product->name,
             'prod_desc' => $typesdesc,
-            'price' => (integer)$totalPrice * 10,
-            'total' => (integer)($totalPrice * (integer)$request->quantity) * 10,
+            'price' => (integer)$totalPrice,
+            'total' => (integer)($totalPrice * (integer)$request->quantity),
             'qty' => (integer)$request->quantity,
             'created_by' => auth()->check() ? auth()->id() : csrf_token(),
             'logofile' => $request->logofile
