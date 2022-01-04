@@ -27,4 +27,13 @@ const mix = require('laravel-mix');
       jquery: ['$', 'window.jQuery']
       })
       .sass('resources/sass/app.scss', 'public/css');
+
+   if (mix.inProduction()) {
+      mix.version();
+   } else {
+      mix.webpackConfig({
+            devtool: 'source-map'
+      })
+      .sourceMaps()
+   }
      

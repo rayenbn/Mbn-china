@@ -7,6 +7,7 @@
 <html lang="en">
 <head>
 <title>{{ $global_settings->meta_title ?? "" }}</title>
+	@include('analitycs')
 	<!--meta info-->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
