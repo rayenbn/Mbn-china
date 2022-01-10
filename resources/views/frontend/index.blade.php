@@ -40,14 +40,14 @@
                     </div>
                     <div class="col-lg-7 promo-section__card">
                         <div class="promo-card">
-                            <a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs">
+                            <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">
                                 <img src="{{ asset('img/ladies-sery-coll-bg2.jpg') }}" alt="" class="promo-card__img">
                             </a>
                             <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
+                                <h2 class="promo-card__title"><a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
                                 <div class="promo-card__text">Disposable Vape Pods, Style and functionality go hand in hand</div>
                                 <div class="promo-card__text">PFL series is designed for ladies</div>
-                                <a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
+                                <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
                             </div>
                         </div>
                     </div>
@@ -60,13 +60,13 @@
                 <div class="row">
                     <div class="col-lg-7 promo-section__card">
                         <div class="promo-card promo-card-offset-left">
-                            <a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs">
+                            <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">
                                 <img src="{{ asset('img/femini-multi-color-banner.jpg') }}" alt="" class="promo-card__img">
                             </a>
                             <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs">PFLS Disposable & Reusable cigarette</a></h2>
+                                <h2 class="promo-card__title"><a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">PFLS Disposable & Reusable cigarette</a></h2>
                                 <div class="promo-card__text">Disposable oil holder part<br>Reusable battery</div>
-                                <a href="/our-products/2-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
+                                <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
                             </div>
                         </div>
                     </div>

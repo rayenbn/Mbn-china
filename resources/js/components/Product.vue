@@ -56,7 +56,7 @@
 
                              <template v-if="colors.length > 0"  >
                                 <div class="color-variants">
-                                    <div>Color: <span id="active-color">{{ prodcolor ?  prodcolor.color_name  : ''}}</span></div>
+                                    <div>Flavors: <span id="active-color">{{ prodcolor ?  prodcolor.color_name  : ''}}</span></div>
                                     <ul class="colors-list">
                                         <li class="colors-list__item"
                                             v-for="(color, index) in colors" 
