@@ -18,7 +18,7 @@ const mix = require('laravel-mix');
       // 'public/theme/assets/libs/jquery-2.2.3.min.js',
 	   'public/theme/assets/libs/bootstrap-4.3.1/js/bootstrap.min.js',
 	   // 'public/theme/assets/libs/select2/js/select2.min.js',
-	   // 'public/theme/assets/libs/slick/slick.min.js',
+	   'public/theme/assets/libs/slick/slick.min.js',
 	   'public/theme/assets/js/custom.js',
       'public/theme/assets/js/intlTelInput.js',
 
