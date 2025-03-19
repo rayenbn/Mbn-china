@@ -170,7 +170,8 @@ class SliderController extends Controller
 
     private function validateInput($request) {
         $this->validate($request, [
-            'picture' => 'required'
+            'title' => 'required',
+            'subtitle' => 'required'
         ]);
     }
  

@@ -1,233 +1,223 @@
 @extends('layouts.theme')
 @section('content')
 
-<div class="page-content">
-    <main class="main-content">
-        @include('partials.slider', $sliders)
-        
-        <section class="section-featured-icons">
-            <div class="container">
-                <h2 class="screen-reader-text">Our features</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="icon-box icon-box-left icon-box-circle justify-content-sm-center">
-                            <div class="icon-box__icon"><i class="flaticon flaticon-delivery-truck"></i></div>
-                            <div class="icon-box__title">Delivery to all regions</div>
+
+<!-- content -->
+
+    @include('partials.slider', $sliders)
+    
+    <!-- about -->
+    <section id="about">
+        <div class="container mil-p-120-30">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6 col-xl-5">
+
+                    <div class="mil-mb-90">
+                        <h2 class="mil-up mil-mb-60">{{ __('About Us')}}</h2>
+                        <p class="mil-up mil-mb-30">{{ __('At MBN, we bridge China and the Middle East with tailored trade solutions. Headquartered in Saudi Arabia, and supported by offices in China, Bahrain, the UAE, and Egypt, we simplify cross-border success for businesses in both regions.') }}</p>
+
+                        <p class="mil-up mil-mb-60">{{ __('We empower Chinese companies to monetize, market, and localize products for Middle Eastern markets, ensuring cultural relevance and commercial impact. For Middle Eastern businesses, we streamline sourcing, logistics, and shipping from China, delivering quality products efficiently.')}}</p>
+                        <p class="mil-up mil-mb-60">{{ __('With deep local expertise and a passion for collaboration, we turn geographic and cultural diversity into opportunity. Let’s connect your ambitions across continents—where East meets East, and growth begins.')}}</p>
+
+                        <div class="mil-about-quote">
+                            <div class="mil-avatar mil-up">
+                                <img src="{{ asset('theme/img/faces/customers/2.jpg')}}" alt="Founder">
+                            </div>
+                            <h6 class="mil-quote mil-up">{{ __('Bridging Markets.')}} <span class="mil-thin">{{ __('Building Futures.')}}</h6>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="icon-box icon-box-left icon-box-circle justify-content-sm-center">
-                            <div class="icon-box__icon"><i class="flaticon flaticon-sales-ticket"></i></div>
-                            <div class="icon-box__title">Build your Vape!</div>
+
+                </div>
+                <div class="col-lg-5">
+
+                    <div class="mil-about-photo mil-mb-90">
+                        <div class="mil-lines-place"></div>
+                        <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
+                            <img src="{{ asset('theme/img/photo/1.jpg')}}" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="icon-box icon-box-left icon-box-circle justify-content-sm-center">
-                            <div class="icon-box__icon"><i class="flaticon flaticon-thumb-up-gesture"></i></div>
-                            <div class="icon-box__title">The highest quality of products</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about end -->
+
+    <!-- services -->
+    <section class="mil-dark-bg" id="services">
+        <div class="mi-invert-fix">
+            <div class="mil-animation-frame">
+                <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
+                <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px"></div>
+            </div>
+            <div class="container mil-p-120-0">
+
+                <div class="mil-mb-120">
+                    <div class="row">
+                        <div class="col-lg-10">
+
+                            <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up">{!! __('Professionals focused on helping your brand<br> grow and move forward.') !!}</span>
+
                         </div>
+                    </div>
+
+                    <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
+
+                        <span class="mil-text-image"><img src="img/bgvideo.webp" alt="team"></span>
+                        <h2 class="mil-h1 mil-muted mil-center">{{ __('Unique')}} <span class="mil-thin">{{ __('Services')}}</span></h2>
+
+                    </div>
+                    <div class="mil-complex-text justify-content-center mil-up">
+
+                        <h2 class="mil-h1 mil-muted mil-center">{{ __('For Your')}} <span class="mil-thin">{{ __('Business.')}}</span></h2>
+                        <a href="{{ route('md-services') }}" class="mil-services-button mil-button mil-arrow-place"><span>{{ __('What we do')}}</span></a>
+
+                    </div>
+                </div>
+
+                <div class="row mil-services-grid m-0">
+                    <!-- <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                        <a href="service.html" class="mil-service-card-sm mil-up">
+                            <h5 class="mil-muted mil-mb-30">Branding and <br>Identity Design</h5>
+                            <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                        </a>
+
+                    </div> -->
+                    <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                        <a href="{{ route('md-services') }}" class="mil-service-card-sm mil-up">
+                            <h5 class="mil-muted mil-mb-30">{!! __('Website Design <br>and Development') !!}</h5>
+                            <p class="mil-light-soft mil-mb-30">{{ __('Our creative team of professionals focused on helping your brand grow.')}}</p>
+                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                        </a>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                        <a href="{{ route('md-services') }}" class="mil-service-card-sm mil-up">
+                            <h5 class="mil-muted mil-mb-30">{!! __('Advertising and <br>Marketing Campaigns') !!}</h5>
+                            <p class="mil-light-soft mil-mb-30">{{ __('Our creative team of professionals merketers specializing in the middle east market will help you to get in the market with less.')}}</p>
+                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                        </a>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+
+                        <a href="{{ route('md-services') }}" class="mil-service-card-sm mil-up">
+                            <h5 class="mil-muted mil-mb-30">{!! __('Consulting <br>and Development') !!}</h5>
+                            <p class="mil-light-soft mil-mb-30">{{ __('Our team of professionals will guide you to success in the arabic world.')}}</p>
+                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
+                        </a>
+
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <!-- services end -->
 
+    <!-- team -->
+    <section>
+        <div class="container mil-p-120-30">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5 col-xl-4">
 
-        <section class="promo-section" id="scroll-to">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-5 promo-section__img">
-                        <img src="{{ asset('img/blue-t2.jpg') }}" alt="">
+                    <div class="mil-mb-90">
+                        <h2 class="mil-up mil-mb-60"><span class="mil-thin">{{ __('For')}} </span>{{ __('Middle Eastern')}}<br><span class="mil-thin">{{ __('Clients')}}</span></h2>
+                        <p class="mil-up mil-mb-30">{{ __('We streamline your China trade journey—from seamless product sourcing and air/sea shipping to rigorous quality control and customs compliance. Trust our cross-border expertise to deliver efficiency, reliability, and competitive advantage.')}}</p>
+
+                        <!-- <p class="mil-up mil-mb-60">Together, our creative team is committed to delivering impactful work that exceeds expectations.</p> -->
+
+                        <div class="mil-up"><a href="{{ route('cn-services') }}" class="mil-button mil-arrow-place mil-mb-60"><span>Read more</span></a></div>
+
+                        <h4 class="mil-up"><span class="mil-thin">{{ __('Your')}} </span> {{ __('Gateway')}} <br><span class="mil-thin">{{ __('to China')}},</span> {{ __('Simplified.')}}</h4>
                     </div>
-                    <div class="col-lg-7 promo-section__card">
-                        <div class="promo-card">
-                            <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">
-                                <img src="{{ asset('img/ladies-sery-coll-bg2.jpg') }}" alt="" class="promo-card__img">
-                            </a>
-                            <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">PUFFLEX LADIES SERIE 600-4000 Puffs</a></h2>
-                                <div class="promo-card__text">Disposable Vape Pods, Style and functionality go hand in hand</div>
-                                <div class="promo-card__text">PFL series is designed for ladies</div>
-                                <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-            </div>
-        </section>
+                <div class="col-lg-6">
 
-        <section class="promo-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 promo-section__card">
-                        <div class="promo-card promo-card-offset-left">
-                            <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">
-                                <img src="{{ asset('img/femini-multi-color-banner.jpg') }}" alt="" class="promo-card__img">
-                            </a>
-                            <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs">PFLS Disposable & Reusable cigarette</a></h2>
-                                <div class="promo-card__text">Disposable oil holder part<br>Reusable battery</div>
-                                <a href="/our-products/3-pufflex-ladies-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 promo-section__img">
-                        <img src="{{ asset('img/lady-series-bg.jpg') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="promo-section">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-5 promo-section__img">
-                        <img src="{{ asset('img/squear-pufflex1.jpg') }}" alt="">
-                    </div>
-                    <div class="col-lg-7 promo-section__card">
-                        <div class="promo-card">
-                            <a href="/our-products/2-pufflex-square-serie-600-4000-puffs">
-                                <img src="{{ asset('img/square-5.jpg') }}" alt="" class="promo-card__img">
-                            </a>
-                            <div class="promo-card__content">
-                                <h2 class="promo-card__title"><a href="/our-products/2-pufflex-square-serie-600-4000-puffs">PUFFLEX SQUARE SERIE 600-4000 Puffs</a></h2>
-                                <div class="promo-card__text">Disposable Vape Pods, Style and functionality go hand in hand</div>
-                                <div class="promo-card__text">PFSQ series is designed for big puffs cigarette</div>
-                                <a href="/our-products/2-pufflex-square-serie-600-4000-puffs" class="btn btn-primary btn-lg">discover</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <div class="mil-team-list">
+                        <div class="mil-lines-place"></div>
 
-        {{--
-        <section class="section-offers">
-            <div class="container">
-                <h2 class="screen-reader-text">Offers</h2>
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="offer-box">
-                            <img class="offer-box__bg" src="images/670x470.png" alt="">
-                            <div class="offer-box__body">
-                                <div class="offer-box__title">S1 table</div>
-                                <a href="single-product.html" class="btn btn-outline-dark btn-lg">buy $29.99</a>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="row mil-mb-60">
+                            <div class="col-sm-6">
 
-                    <div class="col-md-5">
-                        <a href="shop.html" class="offer-box offer-box-sm">
-                            <img class="offer-box__bg" src="images/470x220.png" alt="">
-                            <div class="offer-box__body">
-                                <div class="offer-box__title">
-                                    <span class="offer-percent">50%</span>
-                                    sale
+                                <div class="mil-team-card mil-up mil-mb-30">
+                                    <img src="{{ asset('theme/img/air.jpg')}}" alt="air freight from china">
+                                    <div class="mil-description">
+                                        <div class="mil-secrc-text">
+                                            <h5 class="mil-muted mil-mb-5"><a href="{{ route('cn-services') }}">{{ __('Air freight')}}</a></h5>
+                                            <p class="mil-link mil-light-soft mil-mb-10">{{ __('5 to 10 days')}}</p>
+                                            <!-- <ul class="mil-social-icons mil-center">
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="shop.html" class="offer-box offer-box-sm">
-                            <img class="offer-box__bg" src="images/470x220.png" alt="">
-                            <div class="offer-box__body">
-                                <div class="offer-box__title">Airshelf</div>
-                            </div>
-                        </a>
-                    </div>
-                </div> <!-- end of featured -->
-            </div>
-        </section>
-        
-        <section class="section-featured-products">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2 class="h3 section-title__heading">Featured products</h2>
-                </div>
-                <ul class="products featured-products columns-4">
-                    <li class="product">
-                        <div class="product-thumb">
-                            <span class="onsale">-30%</span>
-                            <a href="single-product.html" class="product-thumb__link">
-                                <img src="images/270x380.png" alt="">
-                                <span class="btn btn-outline-light shop-link">Shop</span>
-                            </a>
-                        </div>
-                        <div class="product-title"><a href="single-product.html">Cogen warm lamp</a></div>
-                        <div class="price">
-                            <ins><span class="amount">$56.00</span></ins>
-                            <del><span class="amount">$73.00</span></del>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <div class="product-thumb">
-                            <a href="single-product.html" class="product-thumb__link">
-                                <img src="images/270x380.png" alt="">
-                                <span class="btn btn-outline-light shop-link">Shop</span>
-                            </a>
-                        </div>
-                        <div class="product-title"><a href="single-product.html">Dutch grey bag</a></div>
-                        <div class="price">
-                            <span class="amount">$33.00</span>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <div class="product-thumb">
-                            <a href="single-product.html" class="product-thumb__link">
-                                <img src="images/270x380.png" alt="">
-                                <span class="btn btn-outline-light shop-link">Shop</span>
-                            </a>
-                        </div>
-                        <div class="product-title"><a href="single-product.html">Wood tablet deck</a></div>
-                        <div class="price">
-                            <span class="amount">$30.00</span>
-                        </div>
-                    </li>
-                    <li class="product">
-                        <div class="product-thumb">
-                            <a href="single-product.html" class="product-thumb__link">
-                                <img src="images/270x380.png" alt="">
-                                <span class="btn btn-outline-light shop-link">Shop</span>
-                            </a>
-                        </div>
-                        <div class="product-title"><a href="single-product.html">Roniq watch</a></div>
-                        <div class="price">
-                            <span class="amount">$128.00</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        --}}
-        {{--
-        <section class="section-last-posts">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2 class="h3 section-title__heading">From the blog</h2>
-                </div>
 
-                <div class="post-grid row">
-                @foreach($blogs as $key => $blog)
-                    <div class="col-lg-4 col-md-6">
-                        <article class="post-item">
-                            <a href="{{ $blog->path() }}" class="post-thumb">
-                                <img src="../storage/blogs/thumbnail/{{ $blog->image }}" alt="">
-                            </a>
-                            <div class="post-item__content">
-                                <div class="post-date">{{ $blog->created_at->diffForHumans() }}</div>
-                                <h3 class="post-title"><a href="{{ $blog->path() }}">{{ $blog->title ?? ''}}</a></h3>
+                                <div class="mil-team-card mil-up mil-mb-30">
+                                    <img src="{{ asset('theme/img/sea.jpg')}}" alt="sea freight from china">
+                                    <div class="mil-description">
+                                        <div class="mil-secrc-text">
+                                            <h5 class="mil-muted mil-mb-5"><a href="{{ route('cn-services') }}">{{ __('Sea freight')}}</a></h5>
+                                            <p class="mil-link mil-light-soft mil-mb-10">{{ __('approx 1 month')}}</p>
+                                            <!-- <ul class="mil-social-icons mil-center">
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </article>
+                            <div class="col-sm-6">
+
+                                <!-- <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p> -->
+
+                                <div class="mil-team-card mil-up mil-mb-30">
+                                    <img src="{{ asset('theme/img/doortodoor.jpg')}}" alt="Shipping service in china">
+                                    <div class="mil-description">
+                                        <div class="mil-secrc-text">
+                                            <h5 class="mil-muted mil-mb-5"><a href="{{ route('cn-services') }}">{{ __('Door to door')}}</a></h5>
+                                            <p class="mil-link mil-light-soft mil-mb-10">{{ __('KSA, UAE, BH, EGY')}}</p>
+                                            <!-- <ul class="mil-social-icons mil-center">
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mil-team-card mil-up mil-mb-30">
+                                    <img src="{{ asset('theme/img/warehouse.jpg')}}" alt="warehousing serivce in china">
+                                    <div class="mil-description">
+                                        <div class="mil-secrc-text">
+                                            <h5 class="mil-muted mil-mb-5"><a href="{{ route('cn-services') }}/#warehouse">{{ __('Warehouse')}}</a></h5>
+                                            <p class="mil-link mil-light-soft mil-mb-10">{{ __('300 square warehouse space')}}</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
-                @endforeach 
-                   
-                </div>
-                <div class="text-center mt-lg-4">
-                    <a href="{{ route('blogs') }}" class="btn btn-outline-primary btn-lg">View all posts</a>
+
                 </div>
             </div>
-        </section>
---}}
-        <!-- Call Action -->
-        @include('frontend.components.newsletter')
-            <!-- End Section -->
-    </main> <!-- end of main -->
-</div>
+        </div>
+    </section>
+    <!-- team end -->
+
+{{-- @include('frontend.components.newsletter') --}}
 @endsection

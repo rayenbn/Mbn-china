@@ -55,6 +55,14 @@ Route::group(['namespace' => 'Frontend'], function () {
         return view('frontend.security-check');
     })->name("security-check");
 
+    Route::get('services-in-middle-east', function () {
+        return view('frontend.md-services');
+    })->name("md-services");
+
+    Route::get('services-in-china', function () {
+        return view('frontend.cn-services');
+    })->name("cn-services");
+
     
 });
 
